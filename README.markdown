@@ -18,11 +18,11 @@ An example of registering a "Launched App" event whenever a user launches your a
 	
     	// include some info about the type of device, operating system, and version of your app
     	NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
-    												[UIDevice currentDevice].model, @"Model",
-    												[UIDevice currentDevice].systemName, @"System Name",
-    												[UIDevice currentDevice].systemVersion, @"System Version",
-    												[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"], @"My App Version",
-    												nil];
+                            [UIDevice currentDevice].model, @"Model",
+                            [UIDevice currentDevice].systemName, @"System Name",
+                            [UIDevice currentDevice].systemVersion, @"System Version",
+                            [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"], @"My App Version",
+                            nil];
     	[km record:@"Launched App" properties:info];
     }
     
